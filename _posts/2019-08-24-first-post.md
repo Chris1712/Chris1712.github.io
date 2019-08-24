@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "First Post!"
+author: Chris
 ---
 
 # Welcome
