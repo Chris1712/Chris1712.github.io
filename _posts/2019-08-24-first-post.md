@@ -12,9 +12,9 @@ As a start to this blog I thought I'd write a little about the minimal trouble I
 
 To do this simply create a repo named "username.GitHub.io", including an **index.md** file. Then in the repo settings under the "GitHub Pages" section you can use the Theme Chooser to pick out a theme with styling you like. Once that's done, back on the settings page there should be a success message, like so:
 
-![a successful publish](img/GitHub-pages-published.png)
+![a successful publish]({{ site.url }}/img/GitHub-pages-published.png)
 
-Navigating to the url will show the contents of your  **index.md**, rendered according to the theme you've picked. Note that in my case there was a delay of up to a minute between pushing my changes to GitHub and them showing up 
+Navigating to the url will show the contents of your  **index.md**, rendered according to the theme you've picked. Note that in my case there was a delay of up to a minute between pushing my changes to GitHub and them showing up.
 
 ## Adding blog posts to your GitHub Pages
 
@@ -30,11 +30,11 @@ This is because most of the themes don't have their homepages configured to incl
 <h2>Posts</h2>
 
 <ul>
-	{% for post in site.posts %}
-		<li>
-			<a href="{{ post.url }}">{{ post.date }} {{ post.title }}</a>
-		</li>
-	{% endfor %}
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.date }} {{ post.title }}</a>
+    </li>
+  {% endfor %}
 </ul>
 </section>
 ```
