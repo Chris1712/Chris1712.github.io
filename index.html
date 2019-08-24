@@ -1,0 +1,11 @@
+<h1>Chris' tech blog</h1>
+
+Random thoughts and observtions from my experiences as a full-stack developer.
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
