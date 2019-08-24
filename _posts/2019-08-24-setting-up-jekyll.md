@@ -32,7 +32,7 @@ This is because most of the themes don't have their homepages configured to incl
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.date }} {{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
