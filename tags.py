@@ -4,6 +4,7 @@ from collections import defaultdict, OrderedDict
 import operator
 
 posts = glob.glob("_posts/*.md")
+posts.extend(glob.glob("_drafts/*.md"))
 tagExpr = re.compile("tags: (.*)$")
 
 # Get distinct tags
