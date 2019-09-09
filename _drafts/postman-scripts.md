@@ -11,7 +11,7 @@ On top of the nice presentation Postman also has some features that elevate it b
 
 Our REST API requires a [bearer token](https://jwt.io/) for most paths; if a request doesn't include this as a header then it'll return a 401 unauthorised response. With postman scripting you can automate the process of logging in:
 
-The first step is to set a collection to use a bearer token. This way every request in that collection will automatically get a header added with the key "Authorization" and the value "Bearer {token}", where {token} is set to the value of the variable {{RestApiToken}}.
+The first step is to set a collection to use a bearer token. This way every request in that collection will automatically get a header added with the key "Authorization" and the value "Bearer {token}", where {token} is set to the value of the variable *RestApiToken*.
 
 ![setting up collection auth]({{ site.url }}/img/postman-collection-auth.png)
 
@@ -47,9 +47,9 @@ if (!tokenTimeStamp || (tokenTimeStamp + lifeTime) < currentTimeStamp ) {
 
 This is a fairly straightforward script, but there are a few things to note:
 
-1. Here we've got the request hardcoded into the script, not necessarily ideal but the admin/admin user exists within our test system only and as default credentials that are useful for testing purposes.
+1. Here we've got the request hardcoded into the script, not necessarily ideal but the admin/admin user exists within our test system only and as default credentials that are useful for testing purposes. You could replace these with further variables as required.
 
-2. This script stores an extra variable to track the age of the token, also; this way we can avoid generating a new token for each request. In our environment they last for an hour, and so we just make sure our token is less than one hour old.
+2. This script also stores an extra variable to track the age of the token: this way we can avoid generating a new token for each request. In our environment they last for an hour, and so we just make sure our token is less than one hour old.
 
 3. We store the token and token date as environment variables - this way postman will track each separately between each environment, if you have more than one configured (such dev vs test). A JWT  wouldn't usually be reusable between different environments.
 
