@@ -2,7 +2,7 @@
 layout: post
 title:  "Postman scripting"
 author: Chris
-tags: postman
+tags: postman webdev
 ---
 
 One of the tools I use daily when developing our REST API is [Postman](https://www.getpostman.com/). If you've not used Postman before, it's billed as an "API Development Environment", essentially allowing you to send HTTP requests from a flexible and clear GUI, while organising and saving them, and testing the responses received.
