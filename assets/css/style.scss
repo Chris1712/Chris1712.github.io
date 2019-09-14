@@ -5,3 +5,7 @@
 .wrapper {
     width: 980px;
 }
+
+.wrapper > section:nth-child(2) {
+    width: 650px;
+}
