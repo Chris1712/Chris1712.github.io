@@ -1,3 +1,3 @@
-# Chris' tech blog
+# Thoughts on development
 
-Random thoughts and observations from my experiences as a full-stack developer
+Random notes, tutorials and observations from my experiences as a full-stack developer, from CSS and JS to Java and databases.
