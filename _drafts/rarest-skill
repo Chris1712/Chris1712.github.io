@@ -1,0 +1,13 @@
+Using what's already there
+
+	- Example - making a new tool to do X instead of adjusting an existing tool with the extra functionality
+		○ So much more valuable for everyone to have the existing tool with extra features
+			§ idely used
+			§ and another person can now maintain the tool because they took the time to understand and modify it
+	- Link to pingpong guy's accoutn of Mozilla
+	- battle tested
+	- reading code is harder than writing it
+	- gives you a new perspective, valuable software is more about business insights than architecture and algorithms
+	- chesterton's fence
+	- knowing that this is rare, help those that come after you make the right choice - not just about making lives easier when they HAVE to use it, but encouraging them to when they don't have to
+		○ with documentatioin, comments, well-architected code; all the usual things
