@@ -28,7 +28,7 @@ Now a curl to the endpoint will generate a response that complies with the spec:
 
 ![prism mocking curl resul]({{ site.url }}/img/prism-curl.png)
 
-You can see here that the fields generated aren't particularly realistic, though - for example the string fields are just "string". If needed, you can improve this by adding [examples](https://swagger.io/docs/specification/adding-examples/) to your spec under the response or schema - if they're available then prism will pick from those. This is in general a good idea for improving the clarity of your spec, particularly if you expect it to be widely used, or if you're using it to generate documentation.
+You can see here that the fields generated aren't particularly realistic, though - for example the string fields just take the value "string". If needed, you can improve this by adding [examples](https://swagger.io/docs/specification/adding-examples/) to your spec under the response or schema - if they're available then prism will pick from those. This is in general a good idea for improving the clarity of your spec, particularly if you expect it to be widely used, or if you're using it to generate documentation.
 
 So if I edit petstore.yaml to add an example for the fields for the Pet object:
 
@@ -53,6 +53,6 @@ components:
           example: tag1
 ```
 
-Now once prism is restarted more, the response will look a little saner:
+Now once prism is restarted, the response will look a little saner:
 
 ![prism mocking curl resul]({{ site.url }}/img/prism-curl-examples.png)
