@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title:  "OpenAPI mocking with prism"
 author: Chris
