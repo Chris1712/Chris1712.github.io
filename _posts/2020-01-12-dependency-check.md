@@ -16,14 +16,14 @@ As a first run, `mvn org.owasp:dependency-check-maven:check` will generate a rep
 
 ```
 <proxies>
-	<proxy>
-		<id>httpproxy</id>
-		<active>true</active>
-		<protocol>http</protocol>
-		<host>YOUR_PROXY_IP</host>
-		<port>YOUR_PROXY_PORT</port>
-		<nonProxyHosts>localhost</nonProxyHosts>
-	</proxy>
+  <proxy>
+    <id>httpproxy</id>
+    <active>true</active>
+    <protocol>http</protocol>
+    <host>YOUR_PROXY_IP</host>
+    <port>YOUR_PROXY_PORT</port>
+    <nonProxyHosts>localhost</nonProxyHosts>
+  </proxy>
 </proxies>
 ```
 
@@ -33,28 +33,28 @@ Finally, here's an example maven profile that you could use as a stage in a buil
 
 ```
 <profile>
-	<id>DependencyCheck</id>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>5.2.4</version>
-				<configuration>
-					<!-- Configure the build to fail if any vulns with CVSS3 score =>7 (High) -->
-					<!-- See https://nvd.nist.gov/vuln-metrics/cuss -->
-					<failBuildoncvss>7</failBuildonCvss>
-					<suppressionFile>dependency-check-suppress.xml</suppressionFile>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal> 
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+  <id>DependencyCheck</id>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>5.2.4</version>
+        <configuration>
+          <!-- Configure the build to fail if any vulns with CVSS3 score =>7 (High) -->
+          <!-- See https://nvd.nist.gov/vuln-metrics/cuss -->
+          <failBuildoncvss>7</failBuildonCvss>
+          <suppressionFile>dependency-check-suppress.xml</suppressionFile>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal> 
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </profile>
 ```
