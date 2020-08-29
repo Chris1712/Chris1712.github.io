@@ -1,0 +1,6 @@
+digraph G {
+ rankdir="LR";
+ Alexa -> IFTTT [ label="Skill" ];
+ IFTTT -> "Web Server" [ label="HTTP" ];
+ "Web Server" -> "My PC" [ label="WoL Broadcast" ];
+}
